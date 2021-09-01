@@ -1,0 +1,2560 @@
+Output file describing compiled parser placed in UsqlPar.fs and UsqlPar.fsi
+------------------------
+states = 
+state 0:
+  items:
+    _startMain ->  . Main
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   error
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (noprec):   error
+    action 'TIMES' (noprec):   error
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (noprec):   error
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   shift 4
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   error
+    action 'CSTSTRING' (noprec):   error
+    action 'NAME' (noprec):   error
+    action 'CSTINT' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Main: 1
+    goto Stmt: 2
+
+state 1:
+  items:
+    _startMain -> Main . 
+
+  actions:
+    action 'EOF' (noprec):   accept
+    action 'LPAR' (noprec):   accept
+    action 'RPAR' (noprec):   accept
+    action 'COMMA' (noprec):   accept
+    action 'DOT' (noprec):   accept
+    action 'EQ' (noprec):   accept
+    action 'NE' (noprec):   accept
+    action 'GT' (noprec):   accept
+    action 'LT' (noprec):   accept
+    action 'GE' (noprec):   accept
+    action 'LE' (noprec):   accept
+    action 'PLUS' (noprec):   accept
+    action 'MINUS' (noprec):   accept
+    action 'TIMES' (noprec):   accept
+    action 'DIV' (noprec):   accept
+    action 'MOD' (noprec):   accept
+    action 'AND' (noprec):   accept
+    action 'FROM' (noprec):   accept
+    action 'NOT' (noprec):   accept
+    action 'OR' (noprec):   accept
+    action 'SELECT' (noprec):   accept
+    action 'WHERE' (noprec):   accept
+    action 'CSTBOOL' (noprec):   accept
+    action 'CSTSTRING' (noprec):   accept
+    action 'NAME' (noprec):   accept
+    action 'CSTINT' (noprec):   accept
+    action 'error' (noprec):   accept
+    action '#' (noprec):   accept
+    action '$$' (noprec):   accept
+
+  immediate action:   accept
+ gotos:
+
+state 2:
+  items:
+    Main -> Stmt . 'EOF'
+
+  actions:
+    action 'EOF' (noprec):   shift 3
+    action 'LPAR' (noprec):   error
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (noprec):   error
+    action 'TIMES' (noprec):   error
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (noprec):   error
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   error
+    action 'CSTSTRING' (noprec):   error
+    action 'NAME' (noprec):   error
+    action 'CSTINT' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+
+state 3:
+  items:
+    Main -> Stmt 'EOF' . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'LPAR' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'RPAR' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'COMMA' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'DOT' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'EQ' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'NE' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'GT' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'LT' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'GE' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'LE' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'PLUS' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'MINUS' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'TIMES' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'DIV' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'MOD' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'AND' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'FROM' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'NOT' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'OR' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'SELECT' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'WHERE' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'CSTBOOL' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'CSTSTRING' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'NAME' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'CSTINT' (noprec):   reduce Main --> Stmt 'EOF'
+    action 'error' (noprec):   reduce Main --> Stmt 'EOF'
+    action '#' (noprec):   reduce Main --> Stmt 'EOF'
+    action '$$' (noprec):   reduce Main --> Stmt 'EOF'
+
+  immediate action:   reduce Main --> Stmt 'EOF'
+ gotos:
+
+state 4:
+  items:
+    Stmt -> 'SELECT' . Exprs1 'FROM' Names1
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 38
+    goto Exprs1: 5
+    goto Const: 19
+
+state 5:
+  items:
+    Stmt -> 'SELECT' Exprs1 . 'FROM' Names1
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   error
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (noprec):   error
+    action 'TIMES' (noprec):   error
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   shift 6
+    action 'NOT' (noprec):   error
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   error
+    action 'CSTSTRING' (noprec):   error
+    action 'NAME' (noprec):   error
+    action 'CSTINT' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+
+state 6:
+  items:
+    Stmt -> 'SELECT' Exprs1 'FROM' . Names1
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   error
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (noprec):   error
+    action 'TIMES' (noprec):   error
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (noprec):   error
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   error
+    action 'CSTSTRING' (noprec):   error
+    action 'NAME' (noprec):   shift 8
+    action 'CSTINT' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Names1: 7
+
+state 7:
+  items:
+    Stmt -> 'SELECT' Exprs1 'FROM' Names1 . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'LPAR' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'RPAR' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'COMMA' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'DOT' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'EQ' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'NE' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'GT' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'LT' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'GE' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'LE' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'PLUS' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'MINUS' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'TIMES' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'DIV' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'MOD' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'AND' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'FROM' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'NOT' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'OR' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'SELECT' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'WHERE' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'CSTBOOL' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'CSTSTRING' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'NAME' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'CSTINT' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action 'error' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action '#' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+    action '$$' (noprec):   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+
+  immediate action:   reduce Stmt --> 'SELECT' Exprs1 'FROM' Names1
+ gotos:
+
+state 8:
+  items:
+    Names1 -> 'NAME' . 
+    Names1 -> 'NAME' . 'COMMA' Names1
+
+  actions:
+    action 'EOF' (noprec):   reduce Names1 --> 'NAME'
+    action 'LPAR' (noprec):   reduce Names1 --> 'NAME'
+    action 'RPAR' (noprec):   reduce Names1 --> 'NAME'
+    action 'COMMA' (noprec):   shift 9
+    action 'DOT' (noprec):   reduce Names1 --> 'NAME'
+    action 'EQ' (noprec):   reduce Names1 --> 'NAME'
+    action 'NE' (noprec):   reduce Names1 --> 'NAME'
+    action 'GT' (noprec):   reduce Names1 --> 'NAME'
+    action 'LT' (noprec):   reduce Names1 --> 'NAME'
+    action 'GE' (noprec):   reduce Names1 --> 'NAME'
+    action 'LE' (noprec):   reduce Names1 --> 'NAME'
+    action 'PLUS' (noprec):   reduce Names1 --> 'NAME'
+    action 'MINUS' (noprec):   reduce Names1 --> 'NAME'
+    action 'TIMES' (noprec):   reduce Names1 --> 'NAME'
+    action 'DIV' (noprec):   reduce Names1 --> 'NAME'
+    action 'MOD' (noprec):   reduce Names1 --> 'NAME'
+    action 'AND' (noprec):   reduce Names1 --> 'NAME'
+    action 'FROM' (noprec):   reduce Names1 --> 'NAME'
+    action 'NOT' (noprec):   reduce Names1 --> 'NAME'
+    action 'OR' (noprec):   reduce Names1 --> 'NAME'
+    action 'SELECT' (noprec):   reduce Names1 --> 'NAME'
+    action 'WHERE' (noprec):   reduce Names1 --> 'NAME'
+    action 'CSTBOOL' (noprec):   reduce Names1 --> 'NAME'
+    action 'CSTSTRING' (noprec):   reduce Names1 --> 'NAME'
+    action 'NAME' (noprec):   reduce Names1 --> 'NAME'
+    action 'CSTINT' (noprec):   reduce Names1 --> 'NAME'
+    action 'error' (noprec):   reduce Names1 --> 'NAME'
+    action '#' (noprec):   reduce Names1 --> 'NAME'
+    action '$$' (noprec):   reduce Names1 --> 'NAME'
+
+  immediate action: <none>
+ gotos:
+
+state 9:
+  items:
+    Names1 -> 'NAME' 'COMMA' . Names1
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   error
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (noprec):   error
+    action 'TIMES' (noprec):   error
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (noprec):   error
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   error
+    action 'CSTSTRING' (noprec):   error
+    action 'NAME' (noprec):   shift 8
+    action 'CSTINT' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Names1: 10
+
+state 10:
+  items:
+    Names1 -> 'NAME' 'COMMA' Names1 . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'LPAR' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'RPAR' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'COMMA' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'DOT' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'EQ' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'NE' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'GT' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'LT' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'GE' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'LE' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'PLUS' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'MINUS' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'TIMES' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'DIV' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'MOD' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'AND' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'FROM' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'NOT' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'OR' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'SELECT' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'WHERE' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'CSTBOOL' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'CSTSTRING' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'NAME' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'CSTINT' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action 'error' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action '#' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+    action '$$' (noprec):   reduce Names1 --> 'NAME' 'COMMA' Names1
+
+  immediate action:   reduce Names1 --> 'NAME' 'COMMA' Names1
+ gotos:
+
+state 11:
+  items:
+    Column -> 'NAME' . 
+    Column -> 'NAME' . 'DOT' 'NAME'
+    Expr -> 'NAME' . 'LPAR' Exprs 'RPAR'
+
+  actions:
+    action 'EOF' (noprec):   reduce Column --> 'NAME'
+    action 'LPAR' (noprec):   shift 16
+    action 'RPAR' (noprec):   reduce Column --> 'NAME'
+    action 'COMMA' (noprec):   reduce Column --> 'NAME'
+    action 'DOT' (explicit nonassoc 10000):   shift 12
+    action 'EQ' (noprec):   reduce Column --> 'NAME'
+    action 'NE' (noprec):   reduce Column --> 'NAME'
+    action 'GT' (noprec):   reduce Column --> 'NAME'
+    action 'LT' (noprec):   reduce Column --> 'NAME'
+    action 'GE' (noprec):   reduce Column --> 'NAME'
+    action 'LE' (noprec):   reduce Column --> 'NAME'
+    action 'PLUS' (noprec):   reduce Column --> 'NAME'
+    action 'MINUS' (noprec):   reduce Column --> 'NAME'
+    action 'TIMES' (noprec):   reduce Column --> 'NAME'
+    action 'DIV' (noprec):   reduce Column --> 'NAME'
+    action 'MOD' (noprec):   reduce Column --> 'NAME'
+    action 'AND' (noprec):   reduce Column --> 'NAME'
+    action 'FROM' (noprec):   reduce Column --> 'NAME'
+    action 'NOT' (noprec):   reduce Column --> 'NAME'
+    action 'OR' (noprec):   reduce Column --> 'NAME'
+    action 'SELECT' (noprec):   reduce Column --> 'NAME'
+    action 'WHERE' (noprec):   reduce Column --> 'NAME'
+    action 'CSTBOOL' (noprec):   reduce Column --> 'NAME'
+    action 'CSTSTRING' (noprec):   reduce Column --> 'NAME'
+    action 'NAME' (noprec):   reduce Column --> 'NAME'
+    action 'CSTINT' (noprec):   reduce Column --> 'NAME'
+    action 'error' (noprec):   reduce Column --> 'NAME'
+    action '#' (noprec):   reduce Column --> 'NAME'
+    action '$$' (noprec):   reduce Column --> 'NAME'
+
+  immediate action: <none>
+ gotos:
+
+state 12:
+  items:
+    Column -> 'NAME' 'DOT' . 'NAME'
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   error
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (noprec):   error
+    action 'TIMES' (noprec):   error
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (noprec):   error
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   error
+    action 'CSTSTRING' (noprec):   error
+    action 'NAME' (noprec):   shift 13
+    action 'CSTINT' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+
+state 13:
+  items:
+    Column -> 'NAME' 'DOT' 'NAME' . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'LPAR' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'RPAR' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'COMMA' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'DOT' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'EQ' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'NE' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'GT' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'LT' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'GE' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'LE' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'PLUS' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'MINUS' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'TIMES' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'DIV' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'MOD' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'AND' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'FROM' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'NOT' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'OR' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'SELECT' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'WHERE' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'CSTBOOL' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'CSTSTRING' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'NAME' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'CSTINT' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action 'error' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action '#' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+    action '$$' (noprec):   reduce Column --> 'NAME' 'DOT' 'NAME'
+
+  immediate action:   reduce Column --> 'NAME' 'DOT' 'NAME'
+ gotos:
+
+state 14:
+  items:
+    Expr -> 'TIMES' . 
+
+  actions:
+    action 'EOF' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'LPAR' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'RPAR' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'COMMA' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'DOT' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'EQ' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'NE' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'GT' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'LT' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'GE' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'LE' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'PLUS' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'MINUS' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'TIMES' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'DIV' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'MOD' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'AND' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'FROM' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'NOT' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'OR' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'SELECT' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'WHERE' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'CSTBOOL' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'CSTSTRING' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'NAME' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'CSTINT' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action 'error' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action '#' (explicit left 9998):   reduce Expr --> 'TIMES'
+    action '$$' (explicit left 9998):   reduce Expr --> 'TIMES'
+
+  immediate action:   reduce Expr --> 'TIMES'
+ gotos:
+
+state 15:
+  items:
+    Expr -> Column . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Expr --> Column
+    action 'LPAR' (noprec):   reduce Expr --> Column
+    action 'RPAR' (noprec):   reduce Expr --> Column
+    action 'COMMA' (noprec):   reduce Expr --> Column
+    action 'DOT' (noprec):   reduce Expr --> Column
+    action 'EQ' (noprec):   reduce Expr --> Column
+    action 'NE' (noprec):   reduce Expr --> Column
+    action 'GT' (noprec):   reduce Expr --> Column
+    action 'LT' (noprec):   reduce Expr --> Column
+    action 'GE' (noprec):   reduce Expr --> Column
+    action 'LE' (noprec):   reduce Expr --> Column
+    action 'PLUS' (noprec):   reduce Expr --> Column
+    action 'MINUS' (noprec):   reduce Expr --> Column
+    action 'TIMES' (noprec):   reduce Expr --> Column
+    action 'DIV' (noprec):   reduce Expr --> Column
+    action 'MOD' (noprec):   reduce Expr --> Column
+    action 'AND' (noprec):   reduce Expr --> Column
+    action 'FROM' (noprec):   reduce Expr --> Column
+    action 'NOT' (noprec):   reduce Expr --> Column
+    action 'OR' (noprec):   reduce Expr --> Column
+    action 'SELECT' (noprec):   reduce Expr --> Column
+    action 'WHERE' (noprec):   reduce Expr --> Column
+    action 'CSTBOOL' (noprec):   reduce Expr --> Column
+    action 'CSTSTRING' (noprec):   reduce Expr --> Column
+    action 'NAME' (noprec):   reduce Expr --> Column
+    action 'CSTINT' (noprec):   reduce Expr --> Column
+    action 'error' (noprec):   reduce Expr --> Column
+    action '#' (noprec):   reduce Expr --> Column
+    action '$$' (noprec):   reduce Expr --> Column
+
+  immediate action:   reduce Expr --> Column
+ gotos:
+
+state 16:
+  items:
+    Expr -> 'NAME' 'LPAR' . Exprs 'RPAR'
+
+  actions:
+    action 'EOF' (noprec):   reduce Exprs --> 
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   reduce Exprs --> 
+    action 'COMMA' (noprec):   reduce Exprs --> 
+    action 'DOT' (noprec):   reduce Exprs --> 
+    action 'EQ' (noprec):   reduce Exprs --> 
+    action 'NE' (noprec):   reduce Exprs --> 
+    action 'GT' (noprec):   reduce Exprs --> 
+    action 'LT' (noprec):   reduce Exprs --> 
+    action 'GE' (noprec):   reduce Exprs --> 
+    action 'LE' (noprec):   reduce Exprs --> 
+    action 'PLUS' (noprec):   reduce Exprs --> 
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   reduce Exprs --> 
+    action 'MOD' (noprec):   reduce Exprs --> 
+    action 'AND' (noprec):   reduce Exprs --> 
+    action 'FROM' (noprec):   reduce Exprs --> 
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   reduce Exprs --> 
+    action 'SELECT' (noprec):   reduce Exprs --> 
+    action 'WHERE' (noprec):   reduce Exprs --> 
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   reduce Exprs --> 
+    action '#' (noprec):   reduce Exprs --> 
+    action '$$' (noprec):   reduce Exprs --> 
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 38
+    goto Exprs: 17
+    goto Exprs1: 52
+    goto Const: 19
+
+state 17:
+  items:
+    Expr -> 'NAME' 'LPAR' Exprs . 'RPAR'
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   error
+    action 'RPAR' (noprec):   shift 18
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (noprec):   error
+    action 'TIMES' (noprec):   error
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (noprec):   error
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   error
+    action 'CSTSTRING' (noprec):   error
+    action 'NAME' (noprec):   error
+    action 'CSTINT' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+
+state 18:
+  items:
+    Expr -> 'NAME' 'LPAR' Exprs 'RPAR' . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'LPAR' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'RPAR' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'COMMA' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'DOT' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'EQ' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'NE' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'GT' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'LT' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'GE' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'LE' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'PLUS' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'MINUS' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'TIMES' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'DIV' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'MOD' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'AND' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'FROM' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'NOT' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'OR' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'SELECT' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'WHERE' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'CSTBOOL' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'CSTSTRING' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'NAME' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'CSTINT' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action 'error' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action '#' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+    action '$$' (noprec):   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+
+  immediate action:   reduce Expr --> 'NAME' 'LPAR' Exprs 'RPAR'
+ gotos:
+
+state 19:
+  items:
+    Expr -> Const . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Expr --> Const
+    action 'LPAR' (noprec):   reduce Expr --> Const
+    action 'RPAR' (noprec):   reduce Expr --> Const
+    action 'COMMA' (noprec):   reduce Expr --> Const
+    action 'DOT' (noprec):   reduce Expr --> Const
+    action 'EQ' (noprec):   reduce Expr --> Const
+    action 'NE' (noprec):   reduce Expr --> Const
+    action 'GT' (noprec):   reduce Expr --> Const
+    action 'LT' (noprec):   reduce Expr --> Const
+    action 'GE' (noprec):   reduce Expr --> Const
+    action 'LE' (noprec):   reduce Expr --> Const
+    action 'PLUS' (noprec):   reduce Expr --> Const
+    action 'MINUS' (noprec):   reduce Expr --> Const
+    action 'TIMES' (noprec):   reduce Expr --> Const
+    action 'DIV' (noprec):   reduce Expr --> Const
+    action 'MOD' (noprec):   reduce Expr --> Const
+    action 'AND' (noprec):   reduce Expr --> Const
+    action 'FROM' (noprec):   reduce Expr --> Const
+    action 'NOT' (noprec):   reduce Expr --> Const
+    action 'OR' (noprec):   reduce Expr --> Const
+    action 'SELECT' (noprec):   reduce Expr --> Const
+    action 'WHERE' (noprec):   reduce Expr --> Const
+    action 'CSTBOOL' (noprec):   reduce Expr --> Const
+    action 'CSTSTRING' (noprec):   reduce Expr --> Const
+    action 'NAME' (noprec):   reduce Expr --> Const
+    action 'CSTINT' (noprec):   reduce Expr --> Const
+    action 'error' (noprec):   reduce Expr --> Const
+    action '#' (noprec):   reduce Expr --> Const
+    action '$$' (noprec):   reduce Expr --> Const
+
+  immediate action:   reduce Expr --> Const
+ gotos:
+
+state 20:
+  items:
+    Expr -> 'LPAR' . Expr 'RPAR'
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 21
+    goto Const: 19
+
+state 21:
+  items:
+    Expr -> 'LPAR' Expr . 'RPAR'
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   error
+    action 'RPAR' (noprec):   shift 22
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (explicit left 9995):   shift 44
+    action 'NE' (explicit left 9995):   shift 45
+    action 'GT' (explicit nonassoc 9996):   shift 46
+    action 'LT' (explicit nonassoc 9996):   shift 47
+    action 'GE' (explicit nonassoc 9996):   shift 48
+    action 'LE' (explicit nonassoc 9996):   shift 49
+    action 'PLUS' (explicit left 9997):   shift 39
+    action 'MINUS' (explicit left 9997):   shift 40
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit left 9994):   shift 50
+    action 'FROM' (noprec):   error
+    action 'NOT' (noprec):   error
+    action 'OR' (explicit left 9993):   shift 51
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   error
+    action 'CSTSTRING' (noprec):   error
+    action 'NAME' (noprec):   error
+    action 'CSTINT' (noprec):   error
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+
+state 22:
+  items:
+    Expr -> 'LPAR' Expr 'RPAR' . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'LPAR' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'RPAR' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'COMMA' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'DOT' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'EQ' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'NE' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'GT' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'LT' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'GE' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'LE' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'PLUS' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'MINUS' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'TIMES' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'DIV' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'MOD' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'AND' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'FROM' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'NOT' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'OR' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'SELECT' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'WHERE' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'CSTBOOL' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'CSTSTRING' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'NAME' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'CSTINT' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action 'error' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action '#' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+    action '$$' (noprec):   reduce Expr --> 'LPAR' Expr 'RPAR'
+
+  immediate action:   reduce Expr --> 'LPAR' Expr 'RPAR'
+ gotos:
+
+state 23:
+  items:
+    Expr -> 'NOT' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 24
+    goto Const: 19
+
+state 24:
+  items:
+    Expr -> 'NOT' Expr . 
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'LPAR' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'RPAR' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'COMMA' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'DOT' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'EQ' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'NE' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'GT' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'LT' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'GE' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'LE' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'PLUS' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'MINUS' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'TIMES' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'DIV' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'MOD' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'AND' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'FROM' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'NOT' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'OR' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'SELECT' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'WHERE' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'CSTBOOL' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'CSTSTRING' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'NAME' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'CSTINT' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action 'error' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action '#' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+    action '$$' (explicit nonassoc 9999):   reduce Expr --> 'NOT' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 25:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr 'PLUS' Expr . 
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'LPAR' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'RPAR' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'COMMA' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'DOT' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'EQ' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'NE' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'GT' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'LT' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'GE' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'LE' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'PLUS' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'MINUS' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'FROM' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'NOT' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'OR' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'SELECT' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'WHERE' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'CSTBOOL' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'CSTSTRING' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'NAME' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'CSTINT' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action 'error' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action '#' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+    action '$$' (explicit left 9997):   reduce Expr --> Expr 'PLUS' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 26:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr 'MINUS' Expr . 
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'LPAR' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'RPAR' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'COMMA' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'DOT' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'EQ' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'NE' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'GT' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'LT' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'GE' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'LE' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'PLUS' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'MINUS' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'FROM' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'NOT' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'OR' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'SELECT' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'WHERE' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'CSTBOOL' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'CSTSTRING' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'NAME' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'CSTINT' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action 'error' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action '#' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+    action '$$' (explicit left 9997):   reduce Expr --> Expr 'MINUS' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 27:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr 'TIMES' Expr . 
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'LPAR' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'RPAR' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'COMMA' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'DOT' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'EQ' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'NE' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'GT' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'LT' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'GE' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'LE' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'PLUS' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'MINUS' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'TIMES' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'DIV' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'MOD' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'AND' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'FROM' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'NOT' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'OR' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'SELECT' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'WHERE' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'CSTBOOL' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'CSTSTRING' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'NAME' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'CSTINT' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action 'error' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action '#' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+    action '$$' (explicit left 9998):   reduce Expr --> Expr 'TIMES' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 28:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr 'DIV' Expr . 
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'LPAR' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'RPAR' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'COMMA' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'DOT' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'EQ' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'NE' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'GT' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'LT' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'GE' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'LE' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'PLUS' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'MINUS' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'TIMES' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'DIV' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'MOD' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'AND' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'FROM' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'NOT' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'OR' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'SELECT' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'WHERE' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'CSTBOOL' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'CSTSTRING' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'NAME' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'CSTINT' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action 'error' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action '#' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+    action '$$' (explicit left 9998):   reduce Expr --> Expr 'DIV' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 29:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr 'MOD' Expr . 
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'LPAR' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'RPAR' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'COMMA' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'DOT' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'EQ' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'NE' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'GT' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'LT' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'GE' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'LE' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'PLUS' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'MINUS' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'TIMES' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'DIV' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'MOD' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'AND' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'FROM' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'NOT' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'OR' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'SELECT' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'WHERE' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'CSTBOOL' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'CSTSTRING' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'NAME' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'CSTINT' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action 'error' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action '#' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+    action '$$' (explicit left 9998):   reduce Expr --> Expr 'MOD' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 30:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr 'EQ' Expr . 
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'LPAR' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'RPAR' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'COMMA' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'DOT' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'EQ' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'NE' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'GT' (explicit nonassoc 9996):   shift 46
+    action 'LT' (explicit nonassoc 9996):   shift 47
+    action 'GE' (explicit nonassoc 9996):   shift 48
+    action 'LE' (explicit nonassoc 9996):   shift 49
+    action 'PLUS' (explicit left 9997):   shift 39
+    action 'MINUS' (explicit left 9997):   shift 40
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'FROM' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'NOT' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'OR' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'SELECT' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'WHERE' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'CSTBOOL' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'CSTSTRING' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'NAME' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'CSTINT' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action 'error' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action '#' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+    action '$$' (explicit left 9995):   reduce Expr --> Expr 'EQ' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 31:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr 'NE' Expr . 
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'LPAR' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'RPAR' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'COMMA' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'DOT' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'EQ' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'NE' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'GT' (explicit nonassoc 9996):   shift 46
+    action 'LT' (explicit nonassoc 9996):   shift 47
+    action 'GE' (explicit nonassoc 9996):   shift 48
+    action 'LE' (explicit nonassoc 9996):   shift 49
+    action 'PLUS' (explicit left 9997):   shift 39
+    action 'MINUS' (explicit left 9997):   shift 40
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'FROM' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'NOT' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'OR' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'SELECT' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'WHERE' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'CSTBOOL' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'CSTSTRING' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'NAME' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'CSTINT' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action 'error' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action '#' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+    action '$$' (explicit left 9995):   reduce Expr --> Expr 'NE' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 32:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr 'GT' Expr . 
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'LPAR' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'RPAR' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'COMMA' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'DOT' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'EQ' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'NE' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'GT' (explicit nonassoc 9996):   shift 46
+    action 'LT' (explicit nonassoc 9996):   shift 47
+    action 'GE' (explicit nonassoc 9996):   shift 48
+    action 'LE' (explicit nonassoc 9996):   shift 49
+    action 'PLUS' (explicit left 9997):   shift 39
+    action 'MINUS' (explicit left 9997):   shift 40
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'FROM' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'NOT' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'OR' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'SELECT' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'WHERE' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'CSTBOOL' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'CSTSTRING' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'NAME' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'CSTINT' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action 'error' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action '#' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+    action '$$' (explicit nonassoc 9996):   reduce Expr --> Expr 'GT' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 33:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr 'LT' Expr . 
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'LPAR' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'RPAR' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'COMMA' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'DOT' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'EQ' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'NE' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'GT' (explicit nonassoc 9996):   shift 46
+    action 'LT' (explicit nonassoc 9996):   shift 47
+    action 'GE' (explicit nonassoc 9996):   shift 48
+    action 'LE' (explicit nonassoc 9996):   shift 49
+    action 'PLUS' (explicit left 9997):   shift 39
+    action 'MINUS' (explicit left 9997):   shift 40
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'FROM' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'NOT' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'OR' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'SELECT' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'WHERE' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'CSTBOOL' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'CSTSTRING' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'NAME' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'CSTINT' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action 'error' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action '#' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+    action '$$' (explicit nonassoc 9996):   reduce Expr --> Expr 'LT' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 34:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr 'GE' Expr . 
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'LPAR' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'RPAR' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'COMMA' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'DOT' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'EQ' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'NE' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'GT' (explicit nonassoc 9996):   shift 46
+    action 'LT' (explicit nonassoc 9996):   shift 47
+    action 'GE' (explicit nonassoc 9996):   shift 48
+    action 'LE' (explicit nonassoc 9996):   shift 49
+    action 'PLUS' (explicit left 9997):   shift 39
+    action 'MINUS' (explicit left 9997):   shift 40
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'FROM' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'NOT' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'OR' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'SELECT' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'WHERE' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'CSTBOOL' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'CSTSTRING' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'NAME' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'CSTINT' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action 'error' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action '#' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+    action '$$' (explicit nonassoc 9996):   reduce Expr --> Expr 'GE' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 35:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr 'LE' Expr . 
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'LPAR' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'RPAR' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'COMMA' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'DOT' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'EQ' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'NE' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'GT' (explicit nonassoc 9996):   shift 46
+    action 'LT' (explicit nonassoc 9996):   shift 47
+    action 'GE' (explicit nonassoc 9996):   shift 48
+    action 'LE' (explicit nonassoc 9996):   shift 49
+    action 'PLUS' (explicit left 9997):   shift 39
+    action 'MINUS' (explicit left 9997):   shift 40
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'FROM' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'NOT' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'OR' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'SELECT' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'WHERE' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'CSTBOOL' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'CSTSTRING' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'NAME' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'CSTINT' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action 'error' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action '#' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+    action '$$' (explicit nonassoc 9996):   reduce Expr --> Expr 'LE' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 36:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr 'AND' Expr . 
+    Expr -> Expr . 'OR' Expr
+
+  actions:
+    action 'EOF' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'LPAR' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'RPAR' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'COMMA' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'DOT' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'EQ' (explicit left 9995):   shift 44
+    action 'NE' (explicit left 9995):   shift 45
+    action 'GT' (explicit nonassoc 9996):   shift 46
+    action 'LT' (explicit nonassoc 9996):   shift 47
+    action 'GE' (explicit nonassoc 9996):   shift 48
+    action 'LE' (explicit nonassoc 9996):   shift 49
+    action 'PLUS' (explicit left 9997):   shift 39
+    action 'MINUS' (explicit left 9997):   shift 40
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'FROM' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'NOT' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'OR' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'SELECT' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'WHERE' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'CSTBOOL' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'CSTSTRING' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'NAME' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'CSTINT' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action 'error' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action '#' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+    action '$$' (explicit left 9994):   reduce Expr --> Expr 'AND' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 37:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+    Expr -> Expr 'OR' Expr . 
+
+  actions:
+    action 'EOF' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'LPAR' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'RPAR' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'COMMA' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'DOT' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'EQ' (explicit left 9995):   shift 44
+    action 'NE' (explicit left 9995):   shift 45
+    action 'GT' (explicit nonassoc 9996):   shift 46
+    action 'LT' (explicit nonassoc 9996):   shift 47
+    action 'GE' (explicit nonassoc 9996):   shift 48
+    action 'LE' (explicit nonassoc 9996):   shift 49
+    action 'PLUS' (explicit left 9997):   shift 39
+    action 'MINUS' (explicit left 9997):   shift 40
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit left 9994):   shift 50
+    action 'FROM' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'NOT' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'OR' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'SELECT' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'WHERE' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'CSTBOOL' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'CSTSTRING' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'NAME' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'CSTINT' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action 'error' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action '#' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+    action '$$' (explicit left 9993):   reduce Expr --> Expr 'OR' Expr
+
+  immediate action: <none>
+ gotos:
+
+state 38:
+  items:
+    Expr -> Expr . 'PLUS' Expr
+    Expr -> Expr . 'MINUS' Expr
+    Expr -> Expr . 'TIMES' Expr
+    Expr -> Expr . 'DIV' Expr
+    Expr -> Expr . 'MOD' Expr
+    Expr -> Expr . 'EQ' Expr
+    Expr -> Expr . 'NE' Expr
+    Expr -> Expr . 'GT' Expr
+    Expr -> Expr . 'LT' Expr
+    Expr -> Expr . 'GE' Expr
+    Expr -> Expr . 'LE' Expr
+    Expr -> Expr . 'AND' Expr
+    Expr -> Expr . 'OR' Expr
+    Exprs1 -> Expr . 
+    Exprs1 -> Expr . 'COMMA' Exprs1
+
+  actions:
+    action 'EOF' (noprec):   reduce Exprs1 --> Expr
+    action 'LPAR' (noprec):   reduce Exprs1 --> Expr
+    action 'RPAR' (noprec):   reduce Exprs1 --> Expr
+    action 'COMMA' (noprec):   shift 53
+    action 'DOT' (noprec):   reduce Exprs1 --> Expr
+    action 'EQ' (explicit left 9995):   shift 44
+    action 'NE' (explicit left 9995):   shift 45
+    action 'GT' (explicit nonassoc 9996):   shift 46
+    action 'LT' (explicit nonassoc 9996):   shift 47
+    action 'GE' (explicit nonassoc 9996):   shift 48
+    action 'LE' (explicit nonassoc 9996):   shift 49
+    action 'PLUS' (explicit left 9997):   shift 39
+    action 'MINUS' (explicit left 9997):   shift 40
+    action 'TIMES' (explicit left 9998):   shift 41
+    action 'DIV' (explicit left 9998):   shift 42
+    action 'MOD' (explicit left 9998):   shift 43
+    action 'AND' (explicit left 9994):   shift 50
+    action 'FROM' (noprec):   reduce Exprs1 --> Expr
+    action 'NOT' (noprec):   reduce Exprs1 --> Expr
+    action 'OR' (explicit left 9993):   shift 51
+    action 'SELECT' (noprec):   reduce Exprs1 --> Expr
+    action 'WHERE' (noprec):   reduce Exprs1 --> Expr
+    action 'CSTBOOL' (noprec):   reduce Exprs1 --> Expr
+    action 'CSTSTRING' (noprec):   reduce Exprs1 --> Expr
+    action 'NAME' (noprec):   reduce Exprs1 --> Expr
+    action 'CSTINT' (noprec):   reduce Exprs1 --> Expr
+    action 'error' (noprec):   reduce Exprs1 --> Expr
+    action '#' (noprec):   reduce Exprs1 --> Expr
+    action '$$' (noprec):   reduce Exprs1 --> Expr
+
+  immediate action: <none>
+ gotos:
+
+state 39:
+  items:
+    Expr -> Expr 'PLUS' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 25
+    goto Const: 19
+
+state 40:
+  items:
+    Expr -> Expr 'MINUS' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 26
+    goto Const: 19
+
+state 41:
+  items:
+    Expr -> Expr 'TIMES' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 27
+    goto Const: 19
+
+state 42:
+  items:
+    Expr -> Expr 'DIV' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 28
+    goto Const: 19
+
+state 43:
+  items:
+    Expr -> Expr 'MOD' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 29
+    goto Const: 19
+
+state 44:
+  items:
+    Expr -> Expr 'EQ' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 30
+    goto Const: 19
+
+state 45:
+  items:
+    Expr -> Expr 'NE' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 31
+    goto Const: 19
+
+state 46:
+  items:
+    Expr -> Expr 'GT' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 32
+    goto Const: 19
+
+state 47:
+  items:
+    Expr -> Expr 'LT' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 33
+    goto Const: 19
+
+state 48:
+  items:
+    Expr -> Expr 'GE' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 34
+    goto Const: 19
+
+state 49:
+  items:
+    Expr -> Expr 'LE' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 35
+    goto Const: 19
+
+state 50:
+  items:
+    Expr -> Expr 'AND' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 36
+    goto Const: 19
+
+state 51:
+  items:
+    Expr -> Expr 'OR' . Expr
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 37
+    goto Const: 19
+
+state 52:
+  items:
+    Exprs -> Exprs1 . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Exprs --> Exprs1
+    action 'LPAR' (noprec):   reduce Exprs --> Exprs1
+    action 'RPAR' (noprec):   reduce Exprs --> Exprs1
+    action 'COMMA' (noprec):   reduce Exprs --> Exprs1
+    action 'DOT' (noprec):   reduce Exprs --> Exprs1
+    action 'EQ' (noprec):   reduce Exprs --> Exprs1
+    action 'NE' (noprec):   reduce Exprs --> Exprs1
+    action 'GT' (noprec):   reduce Exprs --> Exprs1
+    action 'LT' (noprec):   reduce Exprs --> Exprs1
+    action 'GE' (noprec):   reduce Exprs --> Exprs1
+    action 'LE' (noprec):   reduce Exprs --> Exprs1
+    action 'PLUS' (noprec):   reduce Exprs --> Exprs1
+    action 'MINUS' (noprec):   reduce Exprs --> Exprs1
+    action 'TIMES' (noprec):   reduce Exprs --> Exprs1
+    action 'DIV' (noprec):   reduce Exprs --> Exprs1
+    action 'MOD' (noprec):   reduce Exprs --> Exprs1
+    action 'AND' (noprec):   reduce Exprs --> Exprs1
+    action 'FROM' (noprec):   reduce Exprs --> Exprs1
+    action 'NOT' (noprec):   reduce Exprs --> Exprs1
+    action 'OR' (noprec):   reduce Exprs --> Exprs1
+    action 'SELECT' (noprec):   reduce Exprs --> Exprs1
+    action 'WHERE' (noprec):   reduce Exprs --> Exprs1
+    action 'CSTBOOL' (noprec):   reduce Exprs --> Exprs1
+    action 'CSTSTRING' (noprec):   reduce Exprs --> Exprs1
+    action 'NAME' (noprec):   reduce Exprs --> Exprs1
+    action 'CSTINT' (noprec):   reduce Exprs --> Exprs1
+    action 'error' (noprec):   reduce Exprs --> Exprs1
+    action '#' (noprec):   reduce Exprs --> Exprs1
+    action '$$' (noprec):   reduce Exprs --> Exprs1
+
+  immediate action:   reduce Exprs --> Exprs1
+ gotos:
+
+state 53:
+  items:
+    Exprs1 -> Expr 'COMMA' . Exprs1
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   shift 20
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (explicit left 9997):   shift 56
+    action 'TIMES' (explicit left 9998):   shift 14
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (explicit nonassoc 9999):   shift 23
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   shift 58
+    action 'CSTSTRING' (noprec):   shift 59
+    action 'NAME' (noprec):   shift 11
+    action 'CSTINT' (noprec):   shift 55
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+    goto Column: 15
+    goto Expr: 38
+    goto Exprs1: 54
+    goto Const: 19
+
+state 54:
+  items:
+    Exprs1 -> Expr 'COMMA' Exprs1 . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'LPAR' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'RPAR' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'COMMA' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'DOT' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'EQ' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'NE' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'GT' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'LT' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'GE' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'LE' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'PLUS' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'MINUS' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'TIMES' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'DIV' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'MOD' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'AND' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'FROM' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'NOT' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'OR' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'SELECT' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'WHERE' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'CSTBOOL' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'CSTSTRING' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'NAME' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'CSTINT' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action 'error' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action '#' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+    action '$$' (noprec):   reduce Exprs1 --> Expr 'COMMA' Exprs1
+
+  immediate action:   reduce Exprs1 --> Expr 'COMMA' Exprs1
+ gotos:
+
+state 55:
+  items:
+    Const -> 'CSTINT' . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Const --> 'CSTINT'
+    action 'LPAR' (noprec):   reduce Const --> 'CSTINT'
+    action 'RPAR' (noprec):   reduce Const --> 'CSTINT'
+    action 'COMMA' (noprec):   reduce Const --> 'CSTINT'
+    action 'DOT' (noprec):   reduce Const --> 'CSTINT'
+    action 'EQ' (noprec):   reduce Const --> 'CSTINT'
+    action 'NE' (noprec):   reduce Const --> 'CSTINT'
+    action 'GT' (noprec):   reduce Const --> 'CSTINT'
+    action 'LT' (noprec):   reduce Const --> 'CSTINT'
+    action 'GE' (noprec):   reduce Const --> 'CSTINT'
+    action 'LE' (noprec):   reduce Const --> 'CSTINT'
+    action 'PLUS' (noprec):   reduce Const --> 'CSTINT'
+    action 'MINUS' (noprec):   reduce Const --> 'CSTINT'
+    action 'TIMES' (noprec):   reduce Const --> 'CSTINT'
+    action 'DIV' (noprec):   reduce Const --> 'CSTINT'
+    action 'MOD' (noprec):   reduce Const --> 'CSTINT'
+    action 'AND' (noprec):   reduce Const --> 'CSTINT'
+    action 'FROM' (noprec):   reduce Const --> 'CSTINT'
+    action 'NOT' (noprec):   reduce Const --> 'CSTINT'
+    action 'OR' (noprec):   reduce Const --> 'CSTINT'
+    action 'SELECT' (noprec):   reduce Const --> 'CSTINT'
+    action 'WHERE' (noprec):   reduce Const --> 'CSTINT'
+    action 'CSTBOOL' (noprec):   reduce Const --> 'CSTINT'
+    action 'CSTSTRING' (noprec):   reduce Const --> 'CSTINT'
+    action 'NAME' (noprec):   reduce Const --> 'CSTINT'
+    action 'CSTINT' (noprec):   reduce Const --> 'CSTINT'
+    action 'error' (noprec):   reduce Const --> 'CSTINT'
+    action '#' (noprec):   reduce Const --> 'CSTINT'
+    action '$$' (noprec):   reduce Const --> 'CSTINT'
+
+  immediate action:   reduce Const --> 'CSTINT'
+ gotos:
+
+state 56:
+  items:
+    Const -> 'MINUS' . 'CSTINT'
+
+  actions:
+    action 'EOF' (noprec):   error
+    action 'LPAR' (noprec):   error
+    action 'RPAR' (noprec):   error
+    action 'COMMA' (noprec):   error
+    action 'DOT' (noprec):   error
+    action 'EQ' (noprec):   error
+    action 'NE' (noprec):   error
+    action 'GT' (noprec):   error
+    action 'LT' (noprec):   error
+    action 'GE' (noprec):   error
+    action 'LE' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (noprec):   error
+    action 'TIMES' (noprec):   error
+    action 'DIV' (noprec):   error
+    action 'MOD' (noprec):   error
+    action 'AND' (noprec):   error
+    action 'FROM' (noprec):   error
+    action 'NOT' (noprec):   error
+    action 'OR' (noprec):   error
+    action 'SELECT' (noprec):   error
+    action 'WHERE' (noprec):   error
+    action 'CSTBOOL' (noprec):   error
+    action 'CSTSTRING' (noprec):   error
+    action 'NAME' (noprec):   error
+    action 'CSTINT' (noprec):   shift 57
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+
+  immediate action: <none>
+ gotos:
+
+state 57:
+  items:
+    Const -> 'MINUS' 'CSTINT' . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'LPAR' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'RPAR' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'COMMA' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'DOT' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'EQ' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'NE' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'GT' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'LT' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'GE' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'LE' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'PLUS' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'MINUS' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'TIMES' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'DIV' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'MOD' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'AND' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'FROM' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'NOT' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'OR' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'SELECT' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'WHERE' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'CSTBOOL' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'CSTSTRING' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'NAME' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'CSTINT' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action 'error' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action '#' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+    action '$$' (noprec):   reduce Const --> 'MINUS' 'CSTINT'
+
+  immediate action:   reduce Const --> 'MINUS' 'CSTINT'
+ gotos:
+
+state 58:
+  items:
+    Const -> 'CSTBOOL' . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'LPAR' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'RPAR' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'COMMA' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'DOT' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'EQ' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'NE' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'GT' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'LT' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'GE' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'LE' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'PLUS' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'MINUS' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'TIMES' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'DIV' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'MOD' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'AND' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'FROM' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'NOT' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'OR' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'SELECT' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'WHERE' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'CSTBOOL' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'CSTSTRING' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'NAME' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'CSTINT' (noprec):   reduce Const --> 'CSTBOOL'
+    action 'error' (noprec):   reduce Const --> 'CSTBOOL'
+    action '#' (noprec):   reduce Const --> 'CSTBOOL'
+    action '$$' (noprec):   reduce Const --> 'CSTBOOL'
+
+  immediate action:   reduce Const --> 'CSTBOOL'
+ gotos:
+
+state 59:
+  items:
+    Const -> 'CSTSTRING' . 
+
+  actions:
+    action 'EOF' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'LPAR' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'RPAR' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'COMMA' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'DOT' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'EQ' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'NE' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'GT' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'LT' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'GE' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'LE' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'PLUS' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'MINUS' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'TIMES' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'DIV' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'MOD' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'AND' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'FROM' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'NOT' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'OR' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'SELECT' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'WHERE' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'CSTBOOL' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'CSTSTRING' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'NAME' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'CSTINT' (noprec):   reduce Const --> 'CSTSTRING'
+    action 'error' (noprec):   reduce Const --> 'CSTSTRING'
+    action '#' (noprec):   reduce Const --> 'CSTSTRING'
+    action '$$' (noprec):   reduce Const --> 'CSTSTRING'
+
+  immediate action:   reduce Const --> 'CSTSTRING'
+ gotos:
+
+
+startStates = 0
+------------------------

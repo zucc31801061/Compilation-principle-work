@@ -1,0 +1,31 @@
+%{
+  (* File Expr/ExprPar.fsy
+     Parser specification for the simple postfix expression language.
+   *)
+  open Absyn
+%}
+
+%token <int> CSTINT
+%token <string> NAME
+%token PLUS MINUS TIMES DIVIDE 
+%token EOF
+
+%start Main
+%type <Absyn.expr> Main 
+
+%%
+
+Main:
+    Expr EOF                            { $1                }
+;
+
+Expr:
+    NAME                                { Var $1            }
+  | CSTINT                              { CstI $1           }
+  | Expr Expr OP                       { Prim($3, $1, $2) }
+;
+
+
+OP:
+    PLUS {"+"} | MINUS {"-"}  | TIMES {"*"}| DIVIDE {"/"}   
+;

@@ -1,0 +1,145 @@
+        Output file describing compiled parser placed in ExprPar.fs and ExprPar.fsi
+------------------------
+states = 
+state 0:  items:    _startMain ->  . Main
+  actions:    action 'EOF' (noprec):   error
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (noprec):   error
+    action 'TIMES' (noprec):   error
+    action 'DIVIDE' (noprec):   error
+    action 'NAME' (noprec):   shift 4
+    action 'CSTINT' (noprec):   shift 5
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto Main: 1
+    goto Expr: 2
+state 1:  items:    _startMain -> Main . 
+  actions:    action 'EOF' (noprec):   accept
+    action 'PLUS' (noprec):   accept
+    action 'MINUS' (noprec):   accept
+    action 'TIMES' (noprec):   accept
+    action 'DIVIDE' (noprec):   accept
+    action 'NAME' (noprec):   accept
+    action 'CSTINT' (noprec):   accept
+    action 'error' (noprec):   accept
+    action '#' (noprec):   accept
+    action '$$' (noprec):   accept
+  immediate action:   accept  gotos:state 2:  items:    Main -> Expr . 'EOF'
+    Expr -> Expr . Expr OP
+  actions:    action 'EOF' (noprec):   shift 3
+    action 'PLUS' (noprec):   error
+    action 'MINUS' (noprec):   error
+    action 'TIMES' (noprec):   error
+    action 'DIVIDE' (noprec):   error
+    action 'NAME' (noprec):   shift 4
+    action 'CSTINT' (noprec):   shift 5
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto Expr: 6
+state 3:  items:    Main -> Expr 'EOF' . 
+  actions:    action 'EOF' (noprec):   reduce Main --> Expr 'EOF'
+    action 'PLUS' (noprec):   reduce Main --> Expr 'EOF'
+    action 'MINUS' (noprec):   reduce Main --> Expr 'EOF'
+    action 'TIMES' (noprec):   reduce Main --> Expr 'EOF'
+    action 'DIVIDE' (noprec):   reduce Main --> Expr 'EOF'
+    action 'NAME' (noprec):   reduce Main --> Expr 'EOF'
+    action 'CSTINT' (noprec):   reduce Main --> Expr 'EOF'
+    action 'error' (noprec):   reduce Main --> Expr 'EOF'
+    action '#' (noprec):   reduce Main --> Expr 'EOF'
+    action '$$' (noprec):   reduce Main --> Expr 'EOF'
+  immediate action:   reduce Main --> Expr 'EOF'  gotos:state 4:  items:    Expr -> 'NAME' . 
+  actions:    action 'EOF' (noprec):   reduce Expr --> 'NAME'
+    action 'PLUS' (noprec):   reduce Expr --> 'NAME'
+    action 'MINUS' (noprec):   reduce Expr --> 'NAME'
+    action 'TIMES' (noprec):   reduce Expr --> 'NAME'
+    action 'DIVIDE' (noprec):   reduce Expr --> 'NAME'
+    action 'NAME' (noprec):   reduce Expr --> 'NAME'
+    action 'CSTINT' (noprec):   reduce Expr --> 'NAME'
+    action 'error' (noprec):   reduce Expr --> 'NAME'
+    action '#' (noprec):   reduce Expr --> 'NAME'
+    action '$$' (noprec):   reduce Expr --> 'NAME'
+  immediate action:   reduce Expr --> 'NAME'  gotos:state 5:  items:    Expr -> 'CSTINT' . 
+  actions:    action 'EOF' (noprec):   reduce Expr --> 'CSTINT'
+    action 'PLUS' (noprec):   reduce Expr --> 'CSTINT'
+    action 'MINUS' (noprec):   reduce Expr --> 'CSTINT'
+    action 'TIMES' (noprec):   reduce Expr --> 'CSTINT'
+    action 'DIVIDE' (noprec):   reduce Expr --> 'CSTINT'
+    action 'NAME' (noprec):   reduce Expr --> 'CSTINT'
+    action 'CSTINT' (noprec):   reduce Expr --> 'CSTINT'
+    action 'error' (noprec):   reduce Expr --> 'CSTINT'
+    action '#' (noprec):   reduce Expr --> 'CSTINT'
+    action '$$' (noprec):   reduce Expr --> 'CSTINT'
+  immediate action:   reduce Expr --> 'CSTINT'  gotos:state 6:  items:    Expr -> Expr . Expr OP
+    Expr -> Expr Expr . OP
+  actions:    action 'EOF' (noprec):   error
+    action 'PLUS' (noprec):   shift 8
+    action 'MINUS' (noprec):   shift 9
+    action 'TIMES' (noprec):   shift 10
+    action 'DIVIDE' (noprec):   shift 11
+    action 'NAME' (noprec):   shift 4
+    action 'CSTINT' (noprec):   shift 5
+    action 'error' (noprec):   error
+    action '#' (noprec):   error
+    action '$$' (noprec):   error
+  immediate action: <none>  gotos:    goto Expr: 6
+    goto OP: 7
+state 7:  items:    Expr -> Expr Expr OP . 
+  actions:    action 'EOF' (noprec):   reduce Expr --> Expr Expr OP
+    action 'PLUS' (noprec):   reduce Expr --> Expr Expr OP
+    action 'MINUS' (noprec):   reduce Expr --> Expr Expr OP
+    action 'TIMES' (noprec):   reduce Expr --> Expr Expr OP
+    action 'DIVIDE' (noprec):   reduce Expr --> Expr Expr OP
+    action 'NAME' (noprec):   reduce Expr --> Expr Expr OP
+    action 'CSTINT' (noprec):   reduce Expr --> Expr Expr OP
+    action 'error' (noprec):   reduce Expr --> Expr Expr OP
+    action '#' (noprec):   reduce Expr --> Expr Expr OP
+    action '$$' (noprec):   reduce Expr --> Expr Expr OP
+  immediate action:   reduce Expr --> Expr Expr OP  gotos:state 8:  items:    OP -> 'PLUS' . 
+  actions:    action 'EOF' (noprec):   reduce OP --> 'PLUS'
+    action 'PLUS' (noprec):   reduce OP --> 'PLUS'
+    action 'MINUS' (noprec):   reduce OP --> 'PLUS'
+    action 'TIMES' (noprec):   reduce OP --> 'PLUS'
+    action 'DIVIDE' (noprec):   reduce OP --> 'PLUS'
+    action 'NAME' (noprec):   reduce OP --> 'PLUS'
+    action 'CSTINT' (noprec):   reduce OP --> 'PLUS'
+    action 'error' (noprec):   reduce OP --> 'PLUS'
+    action '#' (noprec):   reduce OP --> 'PLUS'
+    action '$$' (noprec):   reduce OP --> 'PLUS'
+  immediate action:   reduce OP --> 'PLUS'  gotos:state 9:  items:    OP -> 'MINUS' . 
+  actions:    action 'EOF' (noprec):   reduce OP --> 'MINUS'
+    action 'PLUS' (noprec):   reduce OP --> 'MINUS'
+    action 'MINUS' (noprec):   reduce OP --> 'MINUS'
+    action 'TIMES' (noprec):   reduce OP --> 'MINUS'
+    action 'DIVIDE' (noprec):   reduce OP --> 'MINUS'
+    action 'NAME' (noprec):   reduce OP --> 'MINUS'
+    action 'CSTINT' (noprec):   reduce OP --> 'MINUS'
+    action 'error' (noprec):   reduce OP --> 'MINUS'
+    action '#' (noprec):   reduce OP --> 'MINUS'
+    action '$$' (noprec):   reduce OP --> 'MINUS'
+  immediate action:   reduce OP --> 'MINUS'  gotos:state 10:  items:    OP -> 'TIMES' . 
+  actions:    action 'EOF' (noprec):   reduce OP --> 'TIMES'
+    action 'PLUS' (noprec):   reduce OP --> 'TIMES'
+    action 'MINUS' (noprec):   reduce OP --> 'TIMES'
+    action 'TIMES' (noprec):   reduce OP --> 'TIMES'
+    action 'DIVIDE' (noprec):   reduce OP --> 'TIMES'
+    action 'NAME' (noprec):   reduce OP --> 'TIMES'
+    action 'CSTINT' (noprec):   reduce OP --> 'TIMES'
+    action 'error' (noprec):   reduce OP --> 'TIMES'
+    action '#' (noprec):   reduce OP --> 'TIMES'
+    action '$$' (noprec):   reduce OP --> 'TIMES'
+  immediate action:   reduce OP --> 'TIMES'  gotos:state 11:  items:    OP -> 'DIVIDE' . 
+  actions:    action 'EOF' (noprec):   reduce OP --> 'DIVIDE'
+    action 'PLUS' (noprec):   reduce OP --> 'DIVIDE'
+    action 'MINUS' (noprec):   reduce OP --> 'DIVIDE'
+    action 'TIMES' (noprec):   reduce OP --> 'DIVIDE'
+    action 'DIVIDE' (noprec):   reduce OP --> 'DIVIDE'
+    action 'NAME' (noprec):   reduce OP --> 'DIVIDE'
+    action 'CSTINT' (noprec):   reduce OP --> 'DIVIDE'
+    action 'error' (noprec):   reduce OP --> 'DIVIDE'
+    action '#' (noprec):   reduce OP --> 'DIVIDE'
+    action '$$' (noprec):   reduce OP --> 'DIVIDE'
+  immediate action:   reduce OP --> 'DIVIDE'  gotos:
+startStates = 0
+------------------------
